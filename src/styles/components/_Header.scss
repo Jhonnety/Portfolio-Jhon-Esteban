@@ -1,0 +1,133 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: $white;
+  font-family: $font1;
+}
+
+.visible {
+  transform: translateY(0);
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  width: 90px;
+  margin-left: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgIdiom {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-toggle-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 4px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  width: 80%;
+  margin-right: 2%;
+  justify-content: end;
+}
+
+.navbar-menu.open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #0f0b1cdd;
+  height: 100vh;
+}
+
+.navbar-item {
+  font-size: 1.2rem;
+  cursor: pointer;
+  border:2px solid $white;
+  margin: 0 2%;
+  padding: 5px 10px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.green:hover{
+  color: $green;
+  border:2px solid $green;
+  box-shadow: 0 0 20px 10px rgba(130, 250, 170, 0.5);
+}
+.yellow:hover{
+  color: $yellow;
+  border:2px solid $yellow;
+  box-shadow: 0 0 20px 10px rgba(255, 247, 85, 0.5);
+}
+.red:hover{
+  color:$red;
+  border:2px solid $red;
+  box-shadow: 0 0 20px 10px rgba(248, 45, 151, 0.5);
+}
+.blue:hover{
+  color: $blue;
+  border:2px solid $blue;
+  box-shadow: 0 0 20px 10px rgba(1, 196, 231, 0.5);
+}
+.purple:hover{
+  color: $purple;
+  border:2px solid $purple;
+  box-shadow: 0 0 20px 10px rgba(197, 1, 226, 0.5);
+}
+@media (max-width: 800px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+    position: absolute;
+    color: $white;
+    font-size: 30px;
+    right: 50px;
+    z-index: 2;
+  }
+
+  .navbar-item {
+    margin: 20px auto;
+    padding: 20px 0;
+    font-size: 2rem;
+    width: 60%;
+    text-align: center;
+    border-radius: 19px;
+  }
+
+  .navbar-item:hover {
+    background-color: $primaryColor;
+  }
+}

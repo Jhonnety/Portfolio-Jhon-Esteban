@@ -1,0 +1,170 @@
+.profileContainer {
+    width: 100%;
+    height: 100vh;
+    background-color: $primaryColor;
+    display: flex;
+    justify-content: space-evenly;
+
+    .personalInformation {
+        height: 80vh;
+        width: 25%;
+        margin: auto 0;
+        background: linear-gradient($green, transparent) 0 0 / calc(100% + 1px) 10%;
+        background-repeat: no-repeat;
+
+        .profileContainer {
+            background-color: $white;
+            width: 90%;
+            height: 20%;
+            margin: 0 auto;
+            border-radius: 0 0 19px 19px;
+            border-top: 2px solid $white;
+
+            div {
+                background-color: $primaryColor;
+                width: 85%;
+                height: 80%;
+                margin: 0 auto;
+                border-radius: 0 0 19px 19px;
+
+            }
+        }
+
+        .profileImage {
+            background-color: $white;
+            width: 50%;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            margin: 0 auto;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 95%;
+                height: 95%;
+                border-radius: 50%;
+            }
+        }
+
+        h3 {
+            color: $white;
+            font-family: $font1;
+            text-align: justify;
+            font-size: 1rem;
+            transform: translateY(-15%);
+        }
+
+        .developerExperiencieLinks {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+
+            a{
+                cursor: pointer;
+                margin: 0 5%;
+
+                .fa-brands {
+                    color: $white;
+                    font-size: 2rem;
+                }
+            }
+            a:hover{
+                box-shadow: 0 0 20px 10px rgba(130, 250, 170, 0.5);
+                border-radius: 50%;
+
+                .fa-brands {
+                    color: $green;
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+
+    .introductionProfile{
+        height: 80vh;
+        width: 25%;
+        margin: auto 0;
+
+        h1{
+            border-bottom: 2px solid $green;
+            color: $green;
+            font-family: $font1;
+            font-size: 4rem;
+        }
+
+    }
+    .skillContainer {
+        height: 80vh;
+        width: 25%;
+        margin: auto 0;
+        display: flex;
+
+        div{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            i{
+                font-size:3rem;
+                display: block;
+                text-align: center;
+
+            }
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            h3{
+                padding-left: 10px;
+                color:$green;
+                font-size: 1rem;
+                font-family: $font1;
+            }
+            h2{
+                padding-left: 10px;
+                color:$green;
+                font-size: 1rem;
+                font-family: $font1;
+            }
+            
+            .ninety{
+                background: linear-gradient(to top, #82FAAA 90%, white 10%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .fifty{
+                background: linear-gradient(to top, #82FAAA 70%, white 50%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent; 
+            }
+            .seventyFive{
+                background: linear-gradient(to top, #82FAAA 80%, white 25%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent; 
+            }
+            .twentyFive{
+                background: linear-gradient(to top, #82FAAA 55%, white 25%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent; 
+            }
+        }
+    }
+}
+
+
+@media (max-width: 800px) {
+    .profileContainer {
+        display: block;
+        height: auto;
+
+        .personalInformation {
+            width: 90%;
+            margin: auto;
+            padding: 0 5%;
+        }
+    }
+}
