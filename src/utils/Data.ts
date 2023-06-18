@@ -1,6 +1,6 @@
 export const NAME="Jhon Esteban Velásquez Gómez";
-export const CARREAR="Systems Engineer";
-export const CARRERA="Ingeniero en sistemas";
+export const PROFESSION="Systems Engineer";
+export const PROFESION="Ingeniero en sistemas";
 export const PHASE="The technology is the universal language that allows us to shape the future and solve the challenges of the present.";
 export const FRASE="La tecnología es el lenguaje universal que nos permite dar forma al futuro y resolver los desafíos del presente.";
 
@@ -14,3 +14,14 @@ export const INTERMEDIO="Intermedio";
 export const INTERMEDIATE="Intermediate";
 export const BASIC="Basic";
 export const BASICO="Basico";
+
+export const PROFILE="Profile";
+export const PERFIL="Perfil";
+
+export const TECHNOLOGIES="Technologies";
+export const TECNOLOGIAS="Tecnologías";
+
+export const CARREAR="Systems engineering";
+export const CARRERA="Ingenieria en sistemas";
+export const SECOND_CARREAR="physical engineering";
+export const SEGUNDA_CARRERA="Ingeniería física";
