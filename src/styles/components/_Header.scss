@@ -12,7 +12,9 @@
   color: $white;
   font-family: $font1;
 }
-
+.window{
+  background-color: #2d2d2de0;
+}
 .visible {
   transform: translateY(0);
 }

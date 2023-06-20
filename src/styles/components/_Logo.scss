@@ -38,3 +38,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
+
+@media (max-width: 800px)  {
+    .levelSkill{
+        font-size: 0.7rem;
+    }
+}

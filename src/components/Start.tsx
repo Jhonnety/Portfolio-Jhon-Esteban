@@ -8,7 +8,7 @@ export const Start = () => {
   const { language } = useContext(LanguageContext);
 
   return (
-    <div className='startContainer'>
+    <div className='startContainer' id='start'>
       {language == 'es' && 
       <div className='fadeInLeft'>
         <h1>{NAME}</h1>
