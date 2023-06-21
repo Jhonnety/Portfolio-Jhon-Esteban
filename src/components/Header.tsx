@@ -70,7 +70,7 @@ export const Header = () => {
         <li className="navbar-item green" onClick={() => handlPartSelect('profile')}>
           {language === "en" ? "Profile" : "Perfil"}
         </li>
-        <li className="navbar-item blue">
+        <li className="navbar-item blue"  onClick={() => handlPartSelect('projects')}>
           {language === "en" ? "Proyects" : "Proyectos"}
         </li>
         <li className="navbar-item red">

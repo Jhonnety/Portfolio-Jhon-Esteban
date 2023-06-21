@@ -3,7 +3,7 @@ import { PROJECTS } from "../utils/Data";
 
 export const Projects = () => {
   const [currentProjects, setCurrentProjects] = useState<number>(0);
-  const projectsToShow: number = 2;
+  const [projectsToShow, setProjectsToShow] = useState(2);
 
   const projects = PROJECTS;
 
@@ -41,26 +41,43 @@ export const Projects = () => {
         : []
     );
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 750) {
+        setProjectsToShow(1);
+      } else {
+        setProjectsToShow(2);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="projectsView">
-      <h1>Projects</h1>
+      <h1  id="projects">Projects</h1>
       <div className="projectsContainer">
         <button onClick={handlePreviousProject}><i className="fa-solid fa-chevron-left"></i></button>
-
+        {projectsToShow == 1 && <button onClick={handleNextProject} className="rightButton"><i className="fa-solid fa-chevron-right"></i></button>}
         {displayedProjects.map((project) => (
           <div key={project.id} className="projectContainer">
-            <img src={project.foto}/>
+            <img src={project.foto} />
             <div className="descriptionProject">
               <div className="description">
                 <h2>{project.name}</h2>
                 <p>
-                {project.description}
+                  {project.description}
                 </p>
               </div>
               <div className="links">
                 <div style={{
                   background: `linear-gradient(to right, #01c4e7 ${project.porcent}%, white 50%)`
-                }}><h2>{project.porcent}%</h2></div>
+                }}>
+                  <h2>{project.porcent}%</h2>
+                </div>
                 <a target="_blank" href={project.github}><i className="fa-brands fa-github"></i>Ver repositorio</a>
                 <a target="_blank" href={project.link}><i className="fa-solid fa-link"></i>Ver programa</a>
               </div>
@@ -68,8 +85,7 @@ export const Projects = () => {
 
           </div>
         ))}
-
-        <button onClick={handleNextProject}><i className="fa-solid fa-chevron-right"></i></button>
+        {projectsToShow > 1 && <button onClick={handleNextProject}><i className="fa-solid fa-chevron-right"></i></button>}
       </div>
     </div>
   );
