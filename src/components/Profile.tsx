@@ -53,7 +53,7 @@ export const Profile = () => {
                         <div className='haundredPorcent'><h2>100%</h2></div>
                         <span>{language === "en" ? SECOND_CARREAR : SEGUNDA_CARRERA}</span>
                         <div className='fiftyPorcent'><h2>50%</h2></div>
-                        <h3>{language === "en" ? "Others skills" : "Otros"}</h3>
+                        <h3>{language === "en" ? "Others" : "Otros"}</h3>
                         <div>
                             <img src={iconVite} />
                             <img src={iconFireBase} /> 

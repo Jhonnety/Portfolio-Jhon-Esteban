@@ -64,10 +64,10 @@ export const Header = () => {
         <i className="fa-solid fa-bars navbar-toggle-icon"></i>
       </button>
       <ul className={`navbar-menu ${isNavOpen ? 'open' : ''}`}>
-        <li className="navbar-item green" onClick={() => handlPartSelect('start')}>
+        <li className="navbar-item yellow" onClick={() => handlPartSelect('start')}>
           {language === "en" ? "Start" : "Inicio"}
         </li>
-        <li className="navbar-item yellow" onClick={() => handlPartSelect('profile')}>
+        <li className="navbar-item green" onClick={() => handlPartSelect('profile')}>
           {language === "en" ? "Profile" : "Perfil"}
         </li>
         <li className="navbar-item blue">

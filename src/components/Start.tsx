@@ -12,13 +12,13 @@ export const Start = () => {
       {language == 'es' && 
       <div className='fadeInLeft'>
         <h1>{NAME}</h1>
-        <h3>{PROFESION}</h3>
+        <h3 className='yellowColor'>{PROFESION}</h3>
         <h3>{FRASE}</h3>
       </div>}
       {language == 'en' && 
       <div className='fadeInLeft'>
         <h1>{NAME}</h1>
-        <h3>{PROFESSION}</h3>
+        <h3 className='yellowColor'>{PROFESSION}</h3>
         <h3>{PHASE}</h3>
       </div>}
       <img src={gifCircule} />

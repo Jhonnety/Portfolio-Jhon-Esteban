@@ -1,5 +1,6 @@
 *{ padding: 0; margin: 0;}
 $primaryColor:#0F0B1C;
+$secondColor:#2d2d2de0;
 $white:white;
 $green:#82FAAA;
 $yellow:#FFF755;
@@ -7,10 +8,14 @@ $red:#f82d97;
 $blue:#01c4e7;
 $purple:#c501e2;
 
+$grey:#F4F4F4;
+$greyLetter:#BABDC2;
+$blackLetter:#3D4657;
+$darkGrey:rgba(78,78,78,0.3);
+$robbingEggBlue:#12C9CC;
+
 
 $font1: 'Roboto Mono', monospace;
-$font2: 'Roboto', sans-serif;
-
 
 @keyframes fadeInLeft {
     0% {
