@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { PROJECTS } from "../utils/Data";
+import { LanguageContext } from "../contexts";
 
 export const Projects = () => {
   const [currentProjects, setCurrentProjects] = useState<number>(0);
   const [projectsToShow, setProjectsToShow] = useState(2);
-
+  const [direction, setDirection] = useState(true);
+  const { language } = useContext(LanguageContext);
   const projects = PROJECTS;
 
   useEffect(() => {
@@ -56,20 +58,26 @@ export const Projects = () => {
     };
   }, []);
 
+  const handleDirection= ()=>{
+    setTimeout(()=>{
+      setDirection(false);
+    },1000);
+    setDirection(true);
+  }
   return (
     <div className="projectsView">
-      <h1  id="projects">Projects</h1>
+      <h1  id="projects">{language == 'es' ?  "Proyectos" : "Projects"}</h1>
       <div className="projectsContainer">
         <button onClick={handlePreviousProject}><i className="fa-solid fa-chevron-left"></i></button>
         {projectsToShow == 1 && <button onClick={handleNextProject} className="rightButton"><i className="fa-solid fa-chevron-right"></i></button>}
         {displayedProjects.map((project) => (
-          <div key={project.id} className="projectContainer">
+          <div key={project.id} className="projectContainer fadeInUp">
             <img src={project.foto} />
             <div className="descriptionProject">
               <div className="description">
-                <h2>{project.name}</h2>
+                <h2>{language == 'es' ? project.nameEs : project.nameEn}</h2>
                 <p>
-                  {project.description}
+                  {language == 'es' ? project.descriptionEs : project.descriptionEn}
                 </p>
               </div>
               <div className="links">
@@ -78,8 +86,8 @@ export const Projects = () => {
                 }}>
                   <h2>{project.porcent}%</h2>
                 </div>
-                <a target="_blank" href={project.github}><i className="fa-brands fa-github"></i>Ver repositorio</a>
-                <a target="_blank" href={project.link}><i className="fa-solid fa-link"></i>Ver programa</a>
+                <a target="_blank" href={project.github}><i className="fa-brands fa-github"></i>{language == 'es' ?  "Ver repositorio" : "View source code"}</a>
+                <a target="_blank" href={project.link}><i className="fa-solid fa-link"></i>{language == 'es' ?  "Ver página" : "View page"}</a>
               </div>
             </div>
 

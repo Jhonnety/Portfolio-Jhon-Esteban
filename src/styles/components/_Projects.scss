@@ -133,6 +133,7 @@
 
         button:hover {
             color: $blue;
+            transform: scale(1.2);
         }
 
         button:hover::after {
@@ -156,6 +157,7 @@
             width: 90%;
             word-wrap: break-word;
         }
+
         .projectsContainer {
             button {
                 background: none;
@@ -166,6 +168,7 @@
                 position: relative;
                 z-index: 1;
             }
+
             .rightButton {
                 float: right;
             }
