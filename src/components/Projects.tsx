@@ -5,7 +5,6 @@ import { LanguageContext } from "../contexts";
 export const Projects = () => {
   const [currentProjects, setCurrentProjects] = useState<number>(0);
   const [projectsToShow, setProjectsToShow] = useState(2);
-  const [direction, setDirection] = useState(true);
   const { language } = useContext(LanguageContext);
   const projects = PROJECTS;
 
@@ -58,12 +57,6 @@ export const Projects = () => {
     };
   }, []);
 
-  const handleDirection= ()=>{
-    setTimeout(()=>{
-      setDirection(false);
-    },1000);
-    setDirection(true);
-  }
   return (
     <div className="projectsView">
       <h1  id="projects">{language == 'es' ?  "Proyectos" : "Projects"}</h1>

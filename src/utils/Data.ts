@@ -117,3 +117,25 @@ export const PROJECTS = [
     }
   ];
   
+  export const EXPERIENCES=[
+    {
+      id:1,
+      title:"Ingenio matematico",
+      jobEn:"Web developer - Frontend",
+      descriptionEn:"Implementation of design and functionalities to a recreational puzzle page using HTML, CSS, and Javascript. The development of this project was carried out as part of a social work initiative, thanks to a scholarship provided by Sapiencia.",
+      jobEs:"Desarrollador web - Frontend",
+      descriptionEs:"Implementación de diseño y funcionalidades a una página recreativa sobre un rompecabeza con HTML, CSS y Javascript. La realización de esta fue de carácter labor social debido a una beca con Sapiencia.",
+      phone:"3016878888",
+      email:"info@ingeniomatematio.com",
+    },
+    {
+      id:2,
+      title:"Tuya",
+      jobEn:"Web developer",
+      descriptionEn:"Supporting the development team by implementing React projects in order to contribute to the company. Additionally, learning the basics of backend development in C# with .net core to integrate into future projects.",
+      jobEs:"Desarrollador web",
+      descriptionEs:"Apoyar al equipo de desarrollo implementando desarrollos en React con el fin de aportar a la compañia. Ademas de aprender lo basico sobre el desarrollo backend en C# con .Net core para implementar en los desarrollos.",
+      phone:"3003233709",
+      email:"jgiraldo.103@tuya.com.co",
+    }
+  ];

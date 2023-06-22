@@ -109,7 +109,6 @@
                         align-items: center;
                         justify-content: start;
 
-
                         h2 {
                             color: $white;
                             font-family: $font1;
@@ -154,6 +153,7 @@
 @media (max-width: 1000px) {
     .projectsView {
         h1 {
+            font-size: 3rem;
             width: 90%;
             word-wrap: break-word;
         }
