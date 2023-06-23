@@ -8,7 +8,7 @@ export const Content = () => {
     <>
       <Start />
       <Profile />
-      <Projects />  
+      <Projects />
       <Experience />
     </>
   )

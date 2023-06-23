@@ -59,7 +59,7 @@ export const Projects = () => {
 
   return (
     <div className="projectsView">
-      <h1  id="projects">{language == 'es' ?  "Proyectos" : "Projects"}</h1>
+      <h1 id="projects">{language == 'es' ? "Proyectos" : "Projects"}</h1>
       <div className="projectsContainer">
         <button onClick={handlePreviousProject}><i className="fa-solid fa-chevron-left"></i></button>
         {projectsToShow == 1 && <button onClick={handleNextProject} className="rightButton"><i className="fa-solid fa-chevron-right"></i></button>}
@@ -79,8 +79,8 @@ export const Projects = () => {
                 }}>
                   <h2>{project.porcent}%</h2>
                 </div>
-                <a target="_blank" href={project.github}><i className="fa-brands fa-github"></i>{language == 'es' ?  "Ver repositorio" : "View source code"}</a>
-                <a target="_blank" href={project.link}><i className="fa-solid fa-link"></i>{language == 'es' ?  "Ver página" : "View page"}</a>
+                <a target="_blank" href={project.github}><i className="fa-brands fa-github"></i>{language == 'es' ? "Ver repositorio" : "View source code"}</a>
+                <a target="_blank" href={project.link}><i className="fa-solid fa-link"></i>{language == 'es' ? "Ver página" : "View page"}</a>
               </div>
             </div>
 

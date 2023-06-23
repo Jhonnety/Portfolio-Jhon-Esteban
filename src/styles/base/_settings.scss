@@ -1,4 +1,5 @@
 *{ padding: 0; margin: 0;}
+body{background-color: #0F0B1C;  overflow-x: hidden;} 
 $primaryColor:#0F0B1C;
 $white:white;
 $green:#82FAAA;
@@ -6,7 +7,6 @@ $yellow:#FFF755;
 $red:#f82d97;
 $blue:#01c4e7;
 $purple:#c501e2;
-
 $grey:#F4F4F4;
 $greyLetter:#BABDC2;
 $blackLetter:#3D4657;
@@ -33,24 +33,21 @@ $font1: 'Roboto Mono', monospace;
     animation-fill-mode: both;
 }
 
-.fadeInUp {
-  opacity: 0;
-  transform: scale(1.5);
-  animation-name: fadeInUp;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-.fadeInUp:hover{
-  transform: scale(1.05);
-}
+
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(100px) scale(1.5);
+    transform: translateY(100%);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
