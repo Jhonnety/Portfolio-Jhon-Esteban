@@ -53,9 +53,9 @@ export const Experience = () => {
                             return (<div className="experience" key={experiences.id}>
                                 <span><i className="fa-solid fa-building"></i> {experiences.title}</span>
                                 <small>{language == 'es' ? experiences.jobEs : experiences.jobEn}</small>
-                                <span><i className="fa-solid fa-list-check"></i> {language == 'es' ? 'Tasks carried out:' : 'Labores realizadas:'}</span>
+                                <span><i className="fa-solid fa-list-check"></i> {language == 'en' ? 'Tasks carried out:' : 'Labores realizadas:'}</span>
                                 <p>{language == 'es' ? experiences.descriptionEs : experiences.descriptionEn}</p>
-                                <span><i className="fa-solid fa-address-book"></i> {language == 'es' ? 'Contact:' : 'Contacto:'}</span>
+                                <span><i className="fa-solid fa-address-book"></i> {language == 'en' ? 'Contact:' : 'Contacto:'}</span>
                                 <p>{experiences.phone} <i className="fa-regular fa-mobile"></i></p>
                                 <p>{experiences.email} <i className="fa-regular fa-envelope"></i></p>
                                 <div></div>
