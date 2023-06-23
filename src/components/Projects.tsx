@@ -46,8 +46,10 @@ export const Projects = () => {
     const handleResize = () => {
       if (window.innerWidth < 750) {
         setProjectsToShow(1);
-      } else {
+      } else if (window.innerWidth > 750 && window.innerWidth < 2000){
         setProjectsToShow(2);
+      }else{
+        setProjectsToShow(3);
       }
     };
     window.addEventListener("resize", handleResize);
@@ -65,7 +67,7 @@ export const Projects = () => {
         {projectsToShow == 1 && <button onClick={handleNextProject} className="rightButton"><i className="fa-solid fa-chevron-right"></i></button>}
         {displayedProjects.map((project) => (
           <div key={project.id} className="projectContainer fadeInUp">
-            <img src={project.foto} />
+            <img loading="lazy" src={project.foto} />
             <div className="descriptionProject">
               <div className="description">
                 <h2>{language == 'es' ? project.nameEs : project.nameEn}</h2>
