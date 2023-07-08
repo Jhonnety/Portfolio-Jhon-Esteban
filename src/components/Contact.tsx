@@ -43,6 +43,15 @@ const Contact = () => {
 
     }, [name, email, review])
 
+    useEffect(() => {
+        if (errors.emailError || errors.nameError) {
+            setReview(!review)
+        }
+
+
+    }, [language])
+
+
 
     const onSubmit = (e: any) => {
         e.preventDefault();
@@ -120,7 +129,7 @@ const Contact = () => {
                         />
                         <small>{emailError}</small>
                     </div>
-                    <div className="inputContainer"> 
+                    <div className="inputContainer">
                         <span>{language == 'es' ? "Asunto" : "Subject"}</span>
                         <input
                             placeholder={language == 'es' ? "Asunto" : "Subject"}
