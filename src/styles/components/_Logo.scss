@@ -1,0 +1,46 @@
+
+.iconSkill{
+    font-size:3rem;
+    display: block;
+    text-align: center;
+
+}
+.levelSkill{
+    padding-left: 10px;
+    color:$green;
+    font-size: 1rem;
+    font-family: $font1;
+}
+.porcentSkill{
+    padding-left: 10px;
+    color:$green;
+    font-size: 1rem;
+    font-family: $font1;
+}
+
+.ninety{
+    background: linear-gradient(to top, #82FAAA 90%, white 10%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fifty{
+    background: linear-gradient(to top, #82FAAA 70%, white 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+.seventyFive{
+    background: linear-gradient(to top, #82FAAA 80%, white 25%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+.twentyFive{
+    background: linear-gradient(to top, #82FAAA 55%, white 25%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+@media (max-width: 800px)  {
+    .levelSkill{
+        font-size: 0.7rem;
+    }
+}

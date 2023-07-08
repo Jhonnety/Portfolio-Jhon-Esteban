@@ -39,15 +39,23 @@ export const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [prevScrollPos]);
-  
+
   const { language, changeLanguage } = useContext(LanguageContext);
 
   const handleLanguageChange = (newLanguage: string) => {
     changeLanguage(newLanguage);
   };
-  
+
+  const handlPartSelect = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setIsNavOpen(false);
+    }
+  };
+
   return (
-    <nav className={`navbar ${isNavVisible ? 'visible' : 'hidden'}`}>
+    <nav className={`navbar  ${isNavVisible ? 'visible' : 'hidden'} ${prevScrollPos > 50 ?'window' : ''}`}>
       <div className="navbar-brand">
         <img onClick={() => handleLanguageChange("en")} className='imgIdiom' src={iconEnglish} />
         <img onClick={() => handleLanguageChange("es")} className='imgIdiom' src={iconSpanish} />
@@ -55,20 +63,23 @@ export const Header = () => {
       <button className="navbar-toggle" onClick={toggleNav}>
         <i className="fa-solid fa-bars navbar-toggle-icon"></i>
       </button>
-      {language == 'es' && <ul className={`navbar-menu ${isNavOpen ? 'open' : ''}`}>
-        <li className="navbar-item green">Inicio</li>
-        <li className="navbar-item yellow">Perfil</li>
-        <li className="navbar-item blue">Proyectos</li>
-        <li className="navbar-item red">Experiencia</li>
-        <li className="navbar-item purple">Contacto</li>
-      </ul> }
-      {language == 'en' && <ul className={`navbar-menu ${isNavOpen ? 'open' : ''}`}>
-        <li className="navbar-item green">Start</li>
-        <li className="navbar-item yellow">Profile</li>
-        <li className="navbar-item blue">Proyects</li>
-        <li className="navbar-item red">Experience</li>
-        <li className="navbar-item purple">Contact</li>
-      </ul> }
+      <ul className={`navbar-menu ${isNavOpen ? 'open' : ''}`}>
+        <li className="navbar-item yellow" onClick={() => handlPartSelect('start')}>
+          {language === "en" ? "Start" : "Inicio"}
+        </li>
+        <li className="navbar-item green" onClick={() => handlPartSelect('profile')}>
+          {language === "en" ? "Profile" : "Perfil"}
+        </li>
+        <li className="navbar-item blue"  onClick={() => handlPartSelect('projects')}>
+          {language === "en" ? "Proyects" : "Proyectos"}
+        </li>
+        <li className="navbar-item red" onClick={() => handlPartSelect('experience')}>
+          {language === "en" ? "Experience" : "Experiencia"}
+        </li>
+        <li className="navbar-item purple" onClick={() => handlPartSelect('contact')}>
+          {language === "en" ? "Contact" : "Contacto"}
+        </li>
+      </ul>
     </nav>
 
   )

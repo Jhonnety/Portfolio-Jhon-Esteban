@@ -1,0 +1,22 @@
+.footer{
+    width: 100%;
+    text-align:center;
+    color: $white;
+    font-family: $font1;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    font-size: 0.8rem;
+    a{
+        color:$purple
+    }
+}
+@media (max-width:500px)
+{
+    .footer{
+        padding-top: 4rem;
+    }
+}

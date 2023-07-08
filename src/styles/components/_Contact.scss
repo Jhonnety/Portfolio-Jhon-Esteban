@@ -1,0 +1,214 @@
+.form {
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    background-color: $primaryColor;
+    display: block;
+    padding: 2rem 0;
+
+    h1 {
+        border-bottom: 2px solid $purple;
+        color: $purple;
+        font-family: $font1;
+        font-size: 4rem;
+        margin-left: 6%;
+        width: 90%;
+    }
+
+    .formContainer {
+        width: 80%;
+        margin: 2rem auto 0 auto;
+        height: auto;
+        min-height: 80vh;
+        display: flex;
+        justify-content: space-between;
+
+        .messageContainer {
+            width: 45%;
+            display: block;
+            height: fit-content;
+
+            .message {
+                width: 100%;
+                height: 500px;
+                font-family: $font1;
+                font-size: 1rem;
+                margin-top: 2rem;
+                background: none; 
+                resize: none;
+                border: 0;
+                color: $white;
+                border: 2px solid #767676;
+                border-radius: 19px;
+                scrollbar-width: thin;
+                outline: 2px solid $white;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .message::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            .message:focus {
+                outline: 2px solid $purple;
+            }
+        }
+
+        .subjectContainer {
+            width: 45%;
+            height: fit-content;
+            min-height: 73vmin;
+            display: block;
+            margin-top: 2rem;
+
+            .inputContainer {
+                margin-bottom: 2rem;
+                width: 100%;
+                display: block;
+
+                input {
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 19px;
+                    color: white;
+                    font-family: $font1;
+                    font-size: 1rem;
+                    outline: 2px solid $white;
+                    background: none;
+                    padding: 0 20px;
+                    box-sizing: border-box;
+                }
+
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover,
+                input:-webkit-autofill:focus {
+                    -webkit-box-shadow: 0 0 0px 1000px $primaryColor inset;
+                }
+
+                input:-webkit-autofill {
+                    -webkit-text-fill-color: #ffffff;
+                }
+
+                input:focus {
+                    outline: 2px solid $purple;
+                }
+
+                span {
+                    color: white;
+                    font-family: $font1;
+                    font-size: 1rem;
+                    margin-left: 20px;
+                    display: block;
+                    width: 100%;
+                }
+
+                small {
+                    color: $purple;
+                    margin-left: 20px;
+                    font-family: $font1;
+                    float: right;
+                    display: block;
+                }
+            }
+
+            .buttonsContainer {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                .sendForm {
+                    height: 40px;
+                    font-family: $font1;
+                    font-size: 1.2rem;
+                    color: $white;
+                    cursor: pointer;
+                    border-radius: 19px;
+                    background-color: $purple;
+                    margin: 0;
+                    padding: 5px 20px;
+                    border: 2px solid $white;
+                    transition: box-shadow 0.3s ease-in-out;
+                }
+
+                .whatsapp {
+                    height: 40px;
+                    font-family: $font1;
+                    font-size: 1.2rem;
+                    color: $white;
+                    cursor: pointer;
+                    border-radius: 19px;
+                    background-color: $purple;
+                    margin: 0;
+                    padding: 5px 20px;
+                    border: 2px solid $white;
+                    transition: box-shadow 0.3s ease-in-out;
+                }
+
+                button:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 0 20px 10px rgba(197, 1, 226, 0.5);
+                }
+            }
+        }
+    }
+}
+
+.swal2-popup {
+    font-family: $font1;
+}
+
+@media (max-width: 900px) {
+
+    .form {
+        width: 100%;
+
+
+        h1 {
+            font-size: 3rem;
+            word-wrap: break-word;
+        }
+
+        .formContainer {
+            width: 80%;
+            margin: 2rem auto;
+            padding: 0;
+            display: block;
+
+            .messageContainer {
+                width: 90%;
+                margin: 0 0 2rem 0;
+            }
+
+            .subjectContainer {
+                width: 90%;
+                margin: 0;
+
+                .inputContainer {
+                    input {
+                        width: 100%;
+                    }
+                }
+
+                .buttonsContainer {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+
+                    .sendForm {
+                        width: 50%;
+                        display: block;
+                        margin-bottom: 2rem;
+                    }
+
+                    .whatsapp {
+                        width: 50%;
+                        margin-bottom: 2rem;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

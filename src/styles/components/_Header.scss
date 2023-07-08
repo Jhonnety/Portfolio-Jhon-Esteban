@@ -13,6 +13,10 @@
   font-family: $font1;
 }
 
+.window {
+  background-color: #0f0b1cd8;
+}
+
 .visible {
   transform: translateY(0);
 }
@@ -59,7 +63,7 @@
 }
 
 .navbar-menu.open {
-  position: absolute;
+  position:absolute;
   top: 0;
   left: 0;
   display: flex;
@@ -67,43 +71,51 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #0f0b1cdd;
-  height: 100vh;
+  background-color: #0f0b1cc2; 
+  min-height: 100vh;
+  height: fit-content;
+  overflow:auto;
 }
 
 .navbar-item {
   font-size: 1.2rem;
   cursor: pointer;
-  border:2px solid $white;
+  border: 2px solid $white;
   margin: 0 2%;
   padding: 5px 10px;
   transition: box-shadow 0.3s ease-in-out;
 }
-.green:hover{
+
+.green:hover {
   color: $green;
-  border:2px solid $green;
+  border: 2px solid $green;
   box-shadow: 0 0 20px 10px rgba(130, 250, 170, 0.5);
 }
-.yellow:hover{
+
+.yellow:hover {
   color: $yellow;
-  border:2px solid $yellow;
+  border: 2px solid $yellow;
   box-shadow: 0 0 20px 10px rgba(255, 247, 85, 0.5);
 }
-.red:hover{
-  color:$red;
-  border:2px solid $red;
+
+.red:hover {
+  color: $red;
+  border: 2px solid $red;
   box-shadow: 0 0 20px 10px rgba(248, 45, 151, 0.5);
 }
-.blue:hover{
+
+.blue:hover {
   color: $blue;
-  border:2px solid $blue;
+  border: 2px solid $blue;
   box-shadow: 0 0 20px 10px rgba(1, 196, 231, 0.5);
 }
-.purple:hover{
+
+.purple:hover {
   color: $purple;
-  border:2px solid $purple;
+  border: 2px solid $purple;
   box-shadow: 0 0 20px 10px rgba(197, 1, 226, 0.5);
 }
+
 @media (max-width: 800px) {
   .navbar-menu {
     display: none;
